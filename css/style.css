@@ -15,7 +15,6 @@ body {
   display: grid;
   place-items: center;
   overflow-x: hidden;
-  padding-bottom: 400px;
 }
 
 h1 {
@@ -118,6 +117,7 @@ span {
 
 .headline .container {
   justify-content: space-between;
+  align-items: flex-start;
 }
 .headline .container .headline-text {
   max-width: 552px;
@@ -146,8 +146,8 @@ span {
 }
 .headline .container .headline-video .video {
   position: relative;
+  aspect-ratio: 16/9;
   width: 100%;
-  height: 316px;
   background: #151515;
   border-radius: 16px;
 }
@@ -242,6 +242,7 @@ span {
   .headline .container {
     flex-direction: column;
     gap: 32px;
+    align-items: center;
   }
   .headline .container .headline-video {
     max-width: 552px;
