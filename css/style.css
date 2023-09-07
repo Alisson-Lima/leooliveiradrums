@@ -244,15 +244,27 @@ span {
     gap: 32px;
     align-items: center;
   }
+  .headline .container .headline-text {
+    order: 1;
+    text-align: center;
+  }
+  .headline .container .headline-text h1 {
+    margin: 16px 0 24px;
+  }
+  .headline .container .headline-text h4 {
+    margin-bottom: 32px;
+  }
   .headline .container .headline-video {
+    order: 2;
     max-width: 552px;
   }
   .infos .container {
     flex-direction: column;
-    gap: 40px;
+    gap: 64px;
   }
   .infos .container .infos-title h3:first-child {
     transform: translateX(-32px);
+    margin-bottom: 16px;
   }
   .infos .container .infos-title h3:last-child {
     transform: translateX(32px);
@@ -294,8 +306,17 @@ span {
   .course-modules .container .modules-container .module {
     max-width: 332px;
   }
+  .course-modules .container .cta-section .text h3 {
+    margin-bottom: 16px;
+  }
 }
 @media screen and (max-width: 430px) {
+  .infos .container .infos-title h3 {
+    font-size: 32px;
+  }
+  .infos .container .infos-title h3:first-child {
+    margin: 0 auto;
+  }
   .infos .container .numbers {
     flex-direction: column;
     gap: 32px;
