@@ -1,0 +1,312 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap");
+@font-face {
+  font-family: Monument;
+  src: url(../fonts/MonumentExtended-Regular.otf);
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #0B0B0B;
+  color: #FFFFFF;
+  display: grid;
+  place-items: center;
+  overflow-x: hidden;
+  padding-bottom: 400px;
+}
+
+h1 {
+  font-family: Monument;
+  font-size: 34px;
+  line-height: 120%;
+  font-weight: 100;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-family: Monument;
+  font-weight: 100;
+  font-size: 28px;
+  line-height: 120%;
+}
+
+h3 {
+  font-family: Monument;
+  font-weight: 100;
+  font-size: 24px;
+  line-height: 160%;
+}
+
+h4 {
+  font-family: "Montserrat";
+  font-size: 20px;
+  line-height: 160%;
+  font-weight: 400;
+}
+
+p {
+  font-family: "Montserrat";
+  font-size: 16px;
+  line-height: 160%;
+  font-weight: 400;
+  line-height: 150%;
+}
+
+span {
+  font-family: "Montserrat";
+  font-size: 14px;
+  line-height: 160%;
+  font-weight: 400;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  max-width: 1128px;
+  width: 100%;
+  padding: 0 16px;
+}
+
+.CTA-button {
+  display: inline-flex;
+  align-items: center;
+  width: auto;
+  font-family: "Montserrat";
+  font-size: 16px;
+  font-weight: 500;
+  text-align: center;
+  padding: 16px 32px;
+  border-radius: 8px;
+  background: linear-gradient(90deg, #8239E0 0%, #5416A4 100%);
+  color: #FFFFFF;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: bold;
+}
+.CTA-button svg {
+  margin-left: 22px;
+}
+
+.highlight mark {
+  padding: 4px 16px;
+  background: linear-gradient(90deg, #8239E0 0%, #5416A4 100%);
+  border-radius: 4px;
+  line-height: 160%;
+  color: #FFFFFF;
+}
+
+.section {
+  width: 100%;
+  margin-bottom: 132px;
+}
+
+.header {
+  margin-bottom: 80px;
+  width: 100%;
+  height: 64px;
+  background: #1C1C1C;
+  -webkit-backdrop-filter: blur(4px);
+          backdrop-filter: blur(4px);
+}
+
+.headline .container {
+  justify-content: space-between;
+}
+.headline .container .headline-text {
+  max-width: 552px;
+  min-width: 310px;
+  width: 100%;
+  order: 2;
+}
+.headline .container .headline-text span {
+  display: inline-block;
+  padding: 4px 28px;
+  border: 2px solid #373737;
+  border-radius: 16px;
+  font-size: 14px;
+  background: #1C1C1C;
+}
+.headline .container .headline-text h1 {
+  margin: 16px 0;
+}
+.headline .container .headline-text h4 {
+  margin-bottom: 24px;
+}
+.headline .container .headline-video {
+  order: 1;
+  width: 100%;
+  max-width: 504px;
+}
+.headline .container .headline-video .video {
+  position: relative;
+  width: 100%;
+  height: 316px;
+  background: #151515;
+  border-radius: 16px;
+}
+
+.infos .container {
+  justify-content: space-between;
+}
+.infos .container .infos-title h3:last-child {
+  transform: translateX(64px);
+}
+.infos .container .numbers {
+  max-width: 490px;
+  width: 100%;
+  justify-content: space-between;
+}
+.infos .container .numbers div {
+  flex-direction: column;
+}
+.infos .container .numbers span {
+  display: block;
+  position: relative;
+  width: 2px;
+  height: 32px;
+  background: #383838;
+}
+
+.qualitys .container {
+  flex-direction: column;
+}
+.qualitys .container h2 {
+  text-align: center;
+  margin-bottom: 48px;
+}
+.qualitys .container .cards-container {
+  width: 100%;
+  gap: 32px;
+  flex-wrap: wrap;
+  margin-bottom: 48px;
+}
+.qualitys .container .cards-container .card {
+  width: 332px;
+  padding: 40px 32px;
+  background: #151515;
+  border: 2px solid #1C1C1C;
+  border-radius: 16px;
+}
+.qualitys .container .cards-container .card h1 {
+  font-size: 64px;
+  color: #373737;
+}
+.qualitys .container .cta-p {
+  margin-bottom: 16px;
+  color: #A9A9A9;
+}
+
+.course-modules .container {
+  flex-direction: column;
+}
+.course-modules .container .modules-container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 200px;
+  gap: 24px;
+  margin: 48px;
+}
+.course-modules .container .modules-container .module {
+  max-width: 272px;
+}
+.course-modules .container .modules-container .module h2 {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: #1C1C1C;
+  margin-bottom: 24px;
+}
+.course-modules .container .modules-container .module P {
+  margin-top: 8px;
+}
+.course-modules .container .cta-section {
+  width: 100%;
+  justify-content: space-between;
+}
+.course-modules .container .cta-section .text {
+  max-width: 624px;
+}
+.course-modules .container .cta-section .text p {
+  max-width: 500px;
+}
+
+@media screen and (max-width: 1100px) {
+  .headline .container {
+    flex-direction: column;
+    gap: 32px;
+  }
+  .headline .container .headline-video {
+    max-width: 552px;
+  }
+  .infos .container {
+    flex-direction: column;
+    gap: 40px;
+  }
+  .infos .container .infos-title h3:first-child {
+    transform: translateX(-32px);
+  }
+  .infos .container .infos-title h3:last-child {
+    transform: translateX(32px);
+  }
+  .course-modules .container h2 {
+    text-align: center;
+  }
+  .course-modules .container .modules-container {
+    width: 100%;
+    place-items: center;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .course-modules .container .cta-section {
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  .course-modules .container .cta-section .text {
+    max-width: none;
+  }
+  .course-modules .container .cta-section .text h3, .course-modules .container .cta-section .text p {
+    max-width: none;
+  }
+}
+@media screen and (max-width: 516px) {
+  .infos .container .infos-title h3 {
+    text-align: center;
+  }
+  .infos .container .infos-title h3:first-child {
+    transform: translateX(0);
+  }
+  .infos .container .infos-title h3:last-child {
+    transform: translateX(0);
+  }
+  .course-modules .container .modules-container {
+    grid-template-columns: 1fr;
+  }
+  .course-modules .container .modules-container .module {
+    max-width: 332px;
+  }
+}
+@media screen and (max-width: 430px) {
+  .infos .container .numbers {
+    flex-direction: column;
+    gap: 32px;
+  }
+  .infos .container .numbers h1 {
+    font-size: 64px;
+  }
+  .infos .container .numbers p {
+    font-size: 24px;
+  }
+  .infos .container .numbers span {
+    width: 32px;
+    height: 2px;
+  }
+}
