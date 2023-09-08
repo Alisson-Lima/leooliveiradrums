@@ -318,6 +318,7 @@ span{
             justify-content: center;
 
             width: 100%;
+            max-width: 100%;
             gap: 24px;
             .result{
                 
@@ -441,7 +442,7 @@ span{
 @media screen and (max-width: 430px){
     // HEADLINE
     .headline-text h4{
-        min-width: 400px;
+        font-size: 17px;
         margin: 0 auto;
     }
 
