@@ -10,13 +10,21 @@
     margin: 0;
     box-sizing: border-box;
 }
+html{
+    width: 100vw;
+
+    overflow-x: hidden;
+}
 
 body{
+    position: relative;
+    display: grid;
+
+    place-items: center;
+    width: 100vw;
+
     background-color: $gray-1;
     color: $white;
-    display: grid;
-    place-items: center;
-    overflow-x: hidden;
 }
 
 h1{
@@ -272,6 +280,30 @@ span{
                     max-width: 500px;
                 }
             }
+        }
+    }
+}
+
+// FEEDBACKS
+
+.feedbacks{
+    .container{
+        .feedbacks-title{
+            position: relative;
+            width: 100%;
+            img{
+                position: absolute;
+                max-width: 100%;
+                min-width: 400px;
+                
+                top: 0;
+                left: auto;
+                transform: translateX(-18px);
+
+                user-drag: none;  
+                -webkit-user-drag: none;
+                user-select: none;
+        }
         }
     }
 }
