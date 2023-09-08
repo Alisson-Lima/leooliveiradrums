@@ -288,9 +288,14 @@ span{
 
 .feedbacks{
     .container{
+        position: relative;
+        flex-direction: column;
         .feedbacks-title{
+            margin-bottom: 356px;
             position: relative;
             width: 100%;
+            pointer-events: none;
+            z-index: 2;
             img{
                 position: absolute;
                 max-width: 100%;
@@ -305,6 +310,28 @@ span{
                 user-select: none;
         }
         }
+
+        .results-container{
+            position: relative;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+
+            width: 100%;
+            gap: 24px;
+            .result{
+                
+                position: relative;
+
+                background: $gray-2;
+                border-radius: 16px;
+
+                width: 100%;
+                max-width: 250px;
+
+                aspect-ratio: 9 / 16;
+            }
+        }
     }
 }
 
@@ -318,7 +345,7 @@ span{
             order: 1;
             text-align: center;
             h1{
-                margin: 16px 0 24px;
+                margin: 24px 0;
             }
             h4{
                 margin-bottom: 32px;
@@ -402,9 +429,23 @@ span{
             }
         }
     }
+
+    // Feedbacks
+    .feedbacks .container{
+        .feedbacks-title{
+            margin-bottom: 200px;
+        }
+    }
 }
 
 @media screen and (max-width: 430px){
+    // HEADLINE
+    .headline-text h4{
+        min-width: 400px;
+        margin: 0 auto;
+    }
+
+    // INFOS
     .infos .container{       
         .infos-title{
             h3{
