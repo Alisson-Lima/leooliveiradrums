@@ -1,4 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap");
+@keyframes faixaSlider {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(1800px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
 @font-face {
   font-family: Monument;
   src: url(../fonts/MonumentExtended-Regular.otf);
@@ -286,6 +297,60 @@ span {
   aspect-ratio: 9/16;
 }
 
+.aboutme .container {
+  position: relative;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.aboutme .container .leo-image {
+  display: block;
+  position: relative;
+  max-width: 550px;
+  width: 100%;
+  height: 370px;
+  background: #151515;
+  border-radius: 16px;
+}
+.aboutme .container .about-text {
+  display: block;
+  position: relative;
+  width: calc(50% - 32px);
+}
+.aboutme .container .about-text .name svg {
+  max-width: 355px;
+  margin: 16px 0 48px;
+}
+.aboutme .container .about-text p {
+  margin-bottom: 16px;
+}
+.aboutme .container .about-text span i {
+  color: #A9A9A9;
+}
+
+.faixa {
+  position: relative;
+  width: 100%;
+  background: linear-gradient(90deg, #8239E0 0%, #5416A4 100%);
+  overflow-x: hidden;
+  padding: 8px 0;
+  margin-bottom: 175px;
+}
+.faixa .slider {
+  justify-content: center;
+  gap: 32px;
+  animation: faixaSlider 32s ease-in-out infinite;
+  text-transform: uppercase;
+}
+.faixa .slider h3:nth-child(even) {
+  color: #151515;
+}
+.faixa .slider h3:nth-child(odd) {
+  display: block;
+  text-wrap: nowrap;
+  text-align: center;
+}
+
 @media screen and (max-width: 1100px) {
   .headline .container {
     flex-direction: column;
@@ -336,6 +401,16 @@ span {
   }
   .course-modules .container .cta-section .text h3, .course-modules .container .cta-section .text p {
     max-width: none;
+  }
+  .aboutme .container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+  }
+  .aboutme .container .about-text {
+    max-width: 550px;
+    width: 100%;
   }
 }
 @media screen and (max-width: 516px) {
