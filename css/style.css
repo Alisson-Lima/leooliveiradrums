@@ -418,13 +418,16 @@ span {
 .faq .container {
   flex-direction: column;
 }
-.faq .container h1 {
+.faq .container h2 {
   margin-bottom: 40px;
+  text-align: center;
 }
-.faq .container p:nth-child(3) {
+.faq .container p.cta-text {
   margin-bottom: 16px;
+  text-transform: uppercase;
 }
 .faq .container .faq-container {
+  position: relative;
   border: 2px solid #6B28C2;
   border-radius: 16px;
   max-width: 552px;
@@ -432,8 +435,19 @@ span {
   margin-bottom: 40px;
 }
 .faq .container .faq-container .question {
+  position: relative;
   padding: 24px 32px;
   border-bottom: 2px solid #6B28C2;
+}
+.faq .container .faq-container .question button {
+  display: block;
+  position: absolute;
+  right: 32px;
+  top: 24px;
+  background: none;
+  border: none;
+  padding: 8px;
+  cursor: pointer;
 }
 .faq .container .faq-container .question:last-child {
   border-bottom: none;
@@ -441,6 +455,12 @@ span {
 .faq .container .faq-container .question h4 {
   font-weight: 600;
   margin-bottom: 16px;
+}
+
+.copy {
+  margin: 16px 0;
+  color: gray;
+  text-transform: uppercase;
 }
 
 @media screen and (max-width: 1100px) {
