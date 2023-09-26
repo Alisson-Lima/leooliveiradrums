@@ -23,6 +23,8 @@
 html {
   width: 100vw;
   overflow-x: hidden;
+  scroll-behavior: smooth;
+  scroll-margin: 42px;
 }
 
 body {
