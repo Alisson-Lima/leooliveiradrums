@@ -5,14 +5,19 @@ $purple-dark: #5416A4;
 
 // Gray Scale
 
-$gray-1: #0B0B0B;
-$gray-2: #151515;
-$gray-3: #1C1C1C;
-$gray-4: #373737;
-$gray-5: #484848;
-$gray-6: #A9A9A9;
-$white: #FFFFFF;
+$gray-1: #090312;
+$gray-2: #160F20;
+$gray-3: #332A41;
+$gray-4: #9180A6;
+$gray-5: #C7B9D9;
+$white: #F3EBFD;
 
 // Gradients
 
 $gradient-purple: linear-gradient(90deg, $purple-light 0%, $purple-dark 100%);
+$gradient-black: radial-gradient(66.43% 66.43% at 76.5% 83.5%, #1D0F30 0%, #07020E 100%);
+
+
+// Shadows
+
+$button-shadow: 0px 16.98748px 28.14375px 0px rgba(142, 52, 255, 0.16), 0px 31.92707px 52.63979px 0px rgba(142, 52, 255, 0.19), 0px 75px 126px 0px rgba(142, 52, 255, 0.27);

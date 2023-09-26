@@ -26,6 +26,7 @@
 }
 html{
     width: 100vw;
+    scroll-behavior: smooth;
     overflow-x: hidden;
     scroll-behavior: smooth;
     scroll-margin: 42px;
@@ -40,9 +41,6 @@ body{
 
     background-color: $gray-1;
     color: $white;
-
-    scroll-behavior: smooth;
-    scroll-margin: 42px;
 }
 
 h1{
@@ -80,6 +78,8 @@ p{
     line-height: 160%;
     font-weight: 400;
     line-height: 150%;
+    color: $gray-5;
+
 }
 
 span{
@@ -95,8 +95,26 @@ span{
     align-items: center;
 }
 
+.border{
+    border: 1px solid red;
+}
+
+.effects-bg{
+    display: block;
+    position: absolute;
+}
+
+.bg-frontpage{
+    width: 100vw;
+    height: 100%;
+
+    background-image: url(../img/bg-page.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
 .container{
-    // min-width: 310px;
     max-width: 1128px;
     width: 100%;
     padding: 0 16px;
@@ -107,6 +125,8 @@ span{
     display: inline-flex;
     align-items: center;
     width: auto;
+    transition: box-shadow .8s;
+    transition-delay: .1s;
 
     font-family: "Montserrat";
     font-size: 16px;
@@ -125,6 +145,10 @@ span{
 
     svg{
         margin-left: 22px;
+    }
+
+    &:hover{
+        box-shadow: $button-shadow;
     }
 }
 
@@ -148,13 +172,12 @@ span{
     width: 100%;
     height: 64px;
 
-    background: $gray-3;
+    background: $gray-2;
     backdrop-filter: blur(4px);
 
 }
 
 // HEADLINE
-
 .headline .container{
 
     justify-content: space-between;
@@ -168,10 +191,11 @@ span{
         span{
             display: inline-block;
             padding: 4px 28px;
-            border: 2px solid $gray-4;
+            border: 2px solid $gray-3;
             border-radius: 16px;
             font-size: 14px;
-            background: $gray-3;
+            background: $gray-2;
+            color: $gray-5;
         }
 
         h1{
@@ -199,6 +223,7 @@ span{
 // INFOS
 
 .infos{
+    margin-bottom: 96px;
     .container{
         justify-content: space-between;
         
@@ -220,9 +245,25 @@ span{
                 position: relative;
                 width: 2px;
                 height: 32px;
-                background: #383838;
+                background: $gray-3;
             }
         }
+    }
+}
+
+// MIDPAGE
+.midpage{
+    position: relative;
+    display: block;
+
+    padding: 96px 0;
+    width: 100%;
+    
+    background: linear-gradient(to bottom, $white, #DED5E9);
+
+    color: $gray-2;
+    p{
+        color: $gray-3;
     }
 }
 
@@ -243,8 +284,8 @@ span{
             .card{
                 width: 332px;
                 padding: 40px 32px;
-                background: $gray-2;
-                border: 2px solid $gray-3;
+                background: #DED5E9;
+                border: 2px solid $gray-5;
                 border-radius: 16px;
 
                 h1{
@@ -255,7 +296,7 @@ span{
         }
         .cta-p{
             margin-bottom: 16px;
-            color: $gray-6;
+            color: $gray-4;
         }
     }
 }
@@ -263,6 +304,7 @@ span{
 // COURSE MODULES  
 
 .course-modules{
+    margin-bottom: 0;
     .container{
         flex-direction: column;
 
@@ -279,8 +321,9 @@ span{
                     width: 56px;
                     height: 56px;
                     border-radius: 50%;
-                    background: $gray-3;
+                    background: $gradient-black;
                     margin-bottom: 24px;
+                    color: $white;
                 }
                 P{
                     margin-top: 8px;
@@ -323,10 +366,10 @@ span{
                 left: auto;
                 transform: translateX(-18px);
 
-                user-drag: none;  
                 -webkit-user-drag: none;
+                user-drag: none;  
                 user-select: none;
-        }
+            }
         }
 
         .results-container{
@@ -369,10 +412,15 @@ span{
             position: relative;
             max-width: 550px;
             width: 100%;
-            height: 370px;
-
+            overflow: hidden;
+            
             background: $gray-2;
             border-radius: 16px;
+            img{
+                width: 100%;
+                max-width: 100%;
+                height: fit-content;
+            }
         }
 
         .about-text{
@@ -391,7 +439,7 @@ span{
             }
 
             span i{
-                color: $gray-6;
+                color: $gray-5;
             }
         }
     }
@@ -449,7 +497,6 @@ span{
 
                 #words{
                     transform-origin: center;
-                    // animation: name duration timing-function delay iteration-count direction fill-mode;
                     animation: rotateWords 16s linear infinite;
                 }
             }
@@ -503,6 +550,7 @@ span{
                 text-transform: capitalize;
                 max-width: 250px;
                 margin: 0 auto;
+                color: $gray-4;
             }
         }
     }
@@ -586,7 +634,8 @@ span{
 
 .copy{
     margin: 16px 0;
-    color: gray;
+    color: $gray-3;
+    font-weight: bold;
     text-transform: uppercase;
 }
 

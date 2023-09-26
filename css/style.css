@@ -22,6 +22,7 @@
 
 html {
   width: 100vw;
+  scroll-behavior: smooth;
   overflow-x: hidden;
   scroll-behavior: smooth;
   scroll-margin: 42px;
@@ -32,8 +33,8 @@ body {
   display: grid;
   place-items: center;
   width: 100vw;
-  background-color: #0B0B0B;
-  color: #FFFFFF;
+  background-color: #090312;
+  color: #F3EBFD;
 }
 
 h1 {
@@ -71,6 +72,7 @@ p {
   line-height: 160%;
   font-weight: 400;
   line-height: 150%;
+  color: #C7B9D9;
 }
 
 span {
@@ -86,6 +88,24 @@ span {
   align-items: center;
 }
 
+.border {
+  border: 1px solid red;
+}
+
+.effects-bg {
+  display: block;
+  position: absolute;
+}
+
+.bg-frontpage {
+  width: 100vw;
+  height: 100%;
+  background-image: url(../img/bg-page.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
 .container {
   max-width: 1128px;
   width: 100%;
@@ -96,6 +116,8 @@ span {
   display: inline-flex;
   align-items: center;
   width: auto;
+  transition: box-shadow 0.8s;
+  transition-delay: 0.1s;
   font-family: "Montserrat";
   font-size: 16px;
   font-weight: 500;
@@ -103,7 +125,7 @@ span {
   padding: 16px 32px;
   border-radius: 8px;
   background: linear-gradient(90deg, #8239E0 0%, #5416A4 100%);
-  color: #FFFFFF;
+  color: #F3EBFD;
   text-transform: uppercase;
   text-decoration: none;
   font-weight: bold;
@@ -111,13 +133,16 @@ span {
 .CTA-button svg {
   margin-left: 22px;
 }
+.CTA-button:hover {
+  box-shadow: 0px 16.98748px 28.14375px 0px rgba(142, 52, 255, 0.16), 0px 31.92707px 52.63979px 0px rgba(142, 52, 255, 0.19), 0px 75px 126px 0px rgba(142, 52, 255, 0.27);
+}
 
 .highlight mark {
   padding: 4px 16px;
   background: linear-gradient(90deg, #8239E0 0%, #5416A4 100%);
   border-radius: 4px;
   line-height: 160%;
-  color: #FFFFFF;
+  color: #F3EBFD;
 }
 
 .section {
@@ -129,7 +154,7 @@ span {
   margin-bottom: 80px;
   width: 100%;
   height: 64px;
-  background: #1C1C1C;
+  background: #160F20;
   -webkit-backdrop-filter: blur(4px);
           backdrop-filter: blur(4px);
 }
@@ -147,10 +172,11 @@ span {
 .headline .container .headline-text span {
   display: inline-block;
   padding: 4px 28px;
-  border: 2px solid #373737;
+  border: 2px solid #332A41;
   border-radius: 16px;
   font-size: 14px;
-  background: #1C1C1C;
+  background: #160F20;
+  color: #C7B9D9;
 }
 .headline .container .headline-text h1 {
   margin: 16px 0;
@@ -167,10 +193,13 @@ span {
   position: relative;
   aspect-ratio: 16/9;
   width: 100%;
-  background: #151515;
+  background: #160F20;
   border-radius: 16px;
 }
 
+.infos {
+  margin-bottom: 96px;
+}
 .infos .container {
   justify-content: space-between;
 }
@@ -190,7 +219,19 @@ span {
   position: relative;
   width: 2px;
   height: 32px;
-  background: #383838;
+  background: #332A41;
+}
+
+.midpage {
+  position: relative;
+  display: block;
+  padding: 96px 0;
+  width: 100%;
+  background: linear-gradient(to bottom, #F3EBFD, #DED5E9);
+  color: #160F20;
+}
+.midpage p {
+  color: #332A41;
 }
 
 .qualitys .container {
@@ -209,19 +250,22 @@ span {
 .qualitys .container .cards-container .card {
   width: 332px;
   padding: 40px 32px;
-  background: #151515;
-  border: 2px solid #1C1C1C;
+  background: #DED5E9;
+  border: 2px solid #C7B9D9;
   border-radius: 16px;
 }
 .qualitys .container .cards-container .card h1 {
   font-size: 64px;
-  color: #373737;
+  color: #9180A6;
 }
 .qualitys .container .cta-p {
   margin-bottom: 16px;
-  color: #A9A9A9;
+  color: #9180A6;
 }
 
+.course-modules {
+  margin-bottom: 0;
+}
 .course-modules .container {
   flex-direction: column;
 }
@@ -240,8 +284,9 @@ span {
   width: 56px;
   height: 56px;
   border-radius: 50%;
-  background: #1C1C1C;
+  background: radial-gradient(66.43% 66.43% at 76.5% 83.5%, #1D0F30 0%, #07020E 100%);
   margin-bottom: 24px;
+  color: #F3EBFD;
 }
 .course-modules .container .modules-container .module P {
   margin-top: 8px;
@@ -292,7 +337,7 @@ span {
 }
 .feedbacks .container .results-container .result {
   position: relative;
-  background: #151515;
+  background: #160F20;
   border-radius: 16px;
   width: 100%;
   max-width: 250px;
@@ -310,9 +355,15 @@ span {
   position: relative;
   max-width: 550px;
   width: 100%;
-  height: 370px;
-  background: #151515;
+  overflow: hidden;
+  background: #160F20;
   border-radius: 16px;
+}
+.aboutme .container .leo-image img {
+  width: 100%;
+  max-width: 100%;
+  height: -moz-fit-content;
+  height: fit-content;
 }
 .aboutme .container .about-text {
   display: block;
@@ -327,7 +378,7 @@ span {
   margin-bottom: 16px;
 }
 .aboutme .container .about-text span i {
-  color: #A9A9A9;
+  color: #C7B9D9;
 }
 
 .faixa {
@@ -345,7 +396,7 @@ span {
   text-transform: uppercase;
 }
 .faixa .slider h3:nth-child(even) {
-  color: #151515;
+  color: #160F20;
 }
 .faixa .slider h3:nth-child(odd) {
   display: block;
@@ -381,8 +432,8 @@ span {
   width: 100%;
   max-width: 400px;
   padding: 56px 32px;
-  background: #151515;
-  border: 2px solid #1C1C1C;
+  background: #160F20;
+  border: 2px solid #332A41;
   border-radius: 16px;
   text-align: center;
 }
@@ -415,6 +466,7 @@ span {
   text-transform: capitalize;
   max-width: 250px;
   margin: 0 auto;
+  color: #9180A6;
 }
 
 .faq .container {
@@ -483,7 +535,8 @@ span {
 
 .copy {
   margin: 16px 0;
-  color: gray;
+  color: #332A41;
+  font-weight: bold;
   text-transform: uppercase;
 }
 
@@ -607,4 +660,4 @@ span {
   .CTA-button {
     font-size: 14px;
   }
-}/*# sourceMappingURL=style.css.map */
+}
