@@ -26,10 +26,10 @@
 }
 html{
     width: 100vw;
-    scroll-behavior: smooth;
     overflow-x: hidden;
+
     scroll-behavior: smooth;
-    scroll-margin: 42px;
+    scroll-padding: 85px;
 }
 
 body{
@@ -145,10 +145,19 @@ span{
 
     svg{
         margin-left: 22px;
+        transition: .5s;
     }
 
     &:hover{
         box-shadow: $button-shadow;
+
+        svg:first-child{
+            transform: translateX(6px);
+        }
+        svg:last-child{
+            transform: translateX(8px);
+            transition-delay: .15s;
+        }
     }
 }
 
@@ -269,13 +278,14 @@ span{
 
 // QUALITYS
 
+
 .qualitys{
     .container{
         flex-direction: column;
         h2{
             text-align: center;
             margin-bottom: 48px;
-        }
+        } 
         .cards-container{
             width: 100%;
             gap: 32px;

@@ -22,10 +22,9 @@
 
 html {
   width: 100vw;
-  scroll-behavior: smooth;
   overflow-x: hidden;
   scroll-behavior: smooth;
-  scroll-margin: 42px;
+  scroll-padding: 85px;
 }
 
 body {
@@ -132,9 +131,17 @@ span {
 }
 .CTA-button svg {
   margin-left: 22px;
+  transition: 0.5s;
 }
 .CTA-button:hover {
   box-shadow: 0px 16.98748px 28.14375px 0px rgba(142, 52, 255, 0.16), 0px 31.92707px 52.63979px 0px rgba(142, 52, 255, 0.19), 0px 75px 126px 0px rgba(142, 52, 255, 0.27);
+}
+.CTA-button:hover svg:first-child {
+  transform: translateX(6px);
+}
+.CTA-button:hover svg:last-child {
+  transform: translateX(8px);
+  transition-delay: 0.15s;
 }
 
 .highlight mark {
@@ -320,8 +327,8 @@ span {
   top: 0;
   left: auto;
   transform: translateX(-18px);
-  user-drag: none;
   -webkit-user-drag: none;
+  user-drag: none;
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
