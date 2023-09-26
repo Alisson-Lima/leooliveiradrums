@@ -529,6 +529,8 @@ span{
                 position: relative;
                 padding: 24px 32px;
                 border-bottom: 2px solid $purple;
+                overflow-y: hidden;
+                cursor: pointer;
                 button{
                     display: block;
                     position: absolute;
@@ -538,6 +540,9 @@ span{
                     border: none;
                     padding: 8px;
                     cursor: pointer;
+                    svg{
+                        transition: .5s;
+                    }
                 }
                 &:last-child{
                     border-bottom: none;
@@ -545,6 +550,30 @@ span{
                 h4{
                     font-weight: 600;
                     margin-bottom: 16px;
+                    transition: .5s;
+                }
+                p{
+                    transition: .5s;
+                }
+            }
+
+            .question.open{
+                p{
+                    opacity: 1;
+                }
+            }
+
+            .question.close{
+                h4{
+                    margin: 0;
+                }
+                p{
+                    opacity: 0;
+                    height: 0;
+                }
+
+                button svg{
+                    transform: rotateZ(-45deg);
                 }
             }
         }
