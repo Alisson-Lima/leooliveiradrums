@@ -168,6 +168,7 @@ span {
   position: relative;
 }
 .bg-frontpage .container .bg-detail-headline {
+  display: block;
   position: absolute;
 }
 .bg-frontpage .container .bg-detail-headline:first-child {
@@ -342,6 +343,7 @@ span {
   position: relative;
 }
 .background-mid .container .bg-detail-mid-page {
+  display: block;
   position: absolute;
 }
 .background-mid .container .bg-detail-mid-page:first-child {

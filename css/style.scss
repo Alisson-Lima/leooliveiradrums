@@ -185,6 +185,7 @@ span{
 .bg-frontpage .container{
     position: relative;
     .bg-detail-headline{
+        display: block;
         position: absolute;
         
         &:first-child{
@@ -389,6 +390,7 @@ span{
 .background-mid .container{
     position: relative;
     .bg-detail-mid-page{
+        display: block;
         position: absolute;
         
         &:first-child{
