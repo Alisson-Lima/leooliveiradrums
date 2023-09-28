@@ -1,1 +1,27 @@
-!function(){let e=document.querySelectorAll(".faq .question"),s=document.querySelectorAll(".faq .question p");e.forEach(e=>{e.classList.add("close")}),e.forEach((l,t)=>{l.addEventListener("click",function c(){let o=l.classList.value.includes("close");o?(e[t].classList.remove("close"),e[t].classList.add("open"),s[t].style.height=`${s[t].scrollHeight}px`):(s[t].style.height="0px",e[t].classList.remove("open"),e[t].classList.add("close"))})})}();
+(function(){
+
+const question = document.querySelectorAll(".faq .question");
+const questionParagraphs = document.querySelectorAll(".faq .question p");
+
+question.forEach(q =>{
+  q.classList.add("close");
+});
+
+question.forEach((q, i) => {
+  q.addEventListener("click", function openOrClose(){
+
+  const haveClass = q.classList.value.includes("close");
+
+  if(haveClass){
+      question[i].classList.remove("close");
+      question[i].classList.add("open");
+      questionParagraphs[i].style.height = `${questionParagraphs[i].scrollHeight}px`;
+    }else{
+    questionParagraphs[i].style.height = `0px`;
+      question[i].classList.remove("open");
+      question[i].classList.add("close");
+  }
+  });
+});
+
+})();
