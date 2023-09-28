@@ -1,3 +1,5 @@
+(function(){
+
 // Selecting elements
 
 const question = document.querySelectorAll(".faq .question")
@@ -33,3 +35,5 @@ question.forEach((q, i) => {
   }
   })
 })
+
+})()
