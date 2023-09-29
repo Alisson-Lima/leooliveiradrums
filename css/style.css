@@ -446,6 +446,7 @@ span {
   max-width: 100%;
   height: -moz-fit-content;
   height: fit-content;
+  max-height: 100%;
 }
 .aboutme .container .about-text {
   display: block;
@@ -455,6 +456,16 @@ span {
 .aboutme .container .about-text .name svg {
   max-width: 355px;
   margin: 16px 0 48px;
+}
+.aboutme .container .about-text .name svg path.signature {
+  stroke-dasharray: 2400px;
+  stroke-dashoffset: 2400px;
+  animation: sign 10s ease forwards;
+}
+@keyframes sign {
+  to {
+    stroke-dashoffset: 0px;
+  }
 }
 .aboutme .container .about-text p {
   margin-bottom: 16px;
@@ -609,7 +620,6 @@ span {
 }
 .faq .container .faq-container .question.close p {
   opacity: 0;
-  height: 0;
 }
 .faq .container .faq-container .question.close button svg {
   transform: rotateZ(-45deg);
@@ -693,6 +703,9 @@ span {
   }
 }
 @media screen and (max-width: 516px) {
+  .header {
+    margin-bottom: 56px;
+  }
   .bg-frontpage .container .bg-detail-headline:first-child {
     left: 0;
     top: 0;
@@ -758,4 +771,4 @@ span {
   .CTA-button {
     font-size: 14px;
   }
-}
+}/*# sourceMappingURL=style.css.map */

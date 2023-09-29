@@ -5,6 +5,9 @@ const questionParagraphs = document.querySelectorAll(".faq .question p");
 
 question.forEach(q =>{
   q.classList.add("close");
+  questionParagraphs.forEach(p =>{
+    p.style.height = `0px`;
+  })
 });
 
 question.forEach((q, i) => {

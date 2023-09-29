@@ -516,6 +516,7 @@ span{
                 width: 100%;
                 max-width: 100%;
                 height: fit-content;
+                max-height: 100%;
             }
         }
 
@@ -528,6 +529,18 @@ span{
             .name svg{
                 max-width: 355px;
                 margin: 16px 0 48px;
+
+                path.signature{
+                    stroke-dasharray: 2400px;
+                    stroke-dashoffset: 2400px;
+                    animation: sign 10s ease forwards;
+                }
+
+                @keyframes sign {
+                    to{
+                        stroke-dashoffset: 0px;
+                    }
+                }
             }
 
             p{
@@ -717,7 +730,6 @@ span{
                 }
                 p{
                     opacity: 0;
-                    height: 0;
                 }
 
                 button svg{
@@ -834,6 +846,11 @@ span{
 }
 
 @media screen and (max-width: 516px){
+
+    .header{
+        margin-bottom: 56px;
+    }
+
     // BG HEADLINE
     .bg-frontpage .container{
         .bg-detail-headline{       
