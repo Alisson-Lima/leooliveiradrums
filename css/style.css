@@ -440,13 +440,14 @@ span {
   overflow: hidden;
   background: #160F20;
   border-radius: 16px;
+  height: -moz-fit-content;
+  height: fit-content;
+  max-height: 360px;
 }
 .aboutme .container .leo-image img {
   width: 100%;
   max-width: 100%;
-  height: -moz-fit-content;
-  height: fit-content;
-  max-height: 100%;
+  height: 100%;
 }
 .aboutme .container .about-text {
   display: block;
