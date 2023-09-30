@@ -455,16 +455,80 @@ span {
 }
 .aboutme .container .about-text .name svg {
   max-width: 355px;
-  margin: 16px 0 48px;
+  margin: 16px 0 28px;
+  opacity: 0;
 }
-.aboutme .container .about-text .name svg path.signature {
-  stroke-dasharray: 2400px;
-  stroke-dashoffset: 2400px;
-  animation: sign 10s ease forwards;
+.aboutme .container .about-text .name svg.active {
+  opacity: 1;
+}
+.aboutme .container .about-text .name svg.active #L {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: sign 0.5s ease-out forwards;
+}
+.aboutme .container .about-text .name svg.active #E {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: sign 2s ease-out forwards;
+  animation-delay: 0.5s;
+}
+.aboutme .container .about-text .name svg.active #O {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: sign 2s ease-out forwards;
+  animation-delay: 0.8s;
+}
+.aboutme .container .about-text .name svg.active #O_2 {
+  stroke-dasharray: 1200;
+  stroke-dashoffset: 1200;
+  animation: sign 0.5s ease-out forwards;
+  animation-delay: 1.2s;
+}
+.aboutme .container .about-text .name svg.active #L_2 {
+  stroke-dasharray: 1200;
+  stroke-dashoffset: 1200;
+  animation: sign 1s ease-out forwards;
+  animation-delay: 1.7s;
+}
+.aboutme .container .about-text .name svg.active #I {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: sign 2s ease-out forwards;
+  animation-delay: 2.1s;
+}
+.aboutme .container .about-text .name svg.active #V {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: sign 1.5s ease-out forwards;
+  animation-delay: 2.4s;
+}
+.aboutme .container .about-text .name svg.active #E_2 {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: sign 1.5s ease-out forwards;
+  animation-delay: 2.7s;
+}
+.aboutme .container .about-text .name svg.active #I_2 {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: sign 1.5s ease-out forwards;
+  animation-delay: 3s;
+}
+.aboutme .container .about-text .name svg.active #R {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: sign 1.5s ease-out forwards;
+  animation-delay: 3.2s;
+}
+.aboutme .container .about-text .name svg.active #A {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: sign 1.5s ease-out forwards;
+  animation-delay: 3.5s;
 }
 @keyframes sign {
   to {
-    stroke-dashoffset: 0px;
+    stroke-dashoffset: 0;
   }
 }
 .aboutme .container .about-text p {
@@ -771,4 +835,4 @@ span {
   .CTA-button {
     font-size: 14px;
   }
-}/*# sourceMappingURL=style.css.map */
+}
