@@ -109,14 +109,14 @@ span {
   min-width: 100vw;
   height: 100%;
   overflow: hidden;
-  background-image: url(../img/bg-page.png);
+  background-image: url(../img/bg-page.webp);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
 
 .background-mid {
-  background-image: url(../img/bg-mid-page.png);
+  background-image: url(../img/bg-mid-page.webp);
 }
 
 .container {
