@@ -149,7 +149,7 @@ span{
     padding: 16px 32px;
     border-radius: 8px;
 
-    background: $gradient-purple;
+    background: $gradient-green;
 
     color: $white;
     text-transform: uppercase;
@@ -225,11 +225,13 @@ span{
 .header{
     margin-bottom: 112px;
     width: 100%;
-    height: 40px;
-
+    padding: 10px 0;
     background: #160f2059;
     border-bottom: 2px solid $gray-2;
     backdrop-filter: blur(10px);
+    svg{
+        margin-right: 16px;
+    }
     p{
         color: $gray-4;
         font-weight: 600;
@@ -380,7 +382,10 @@ span{
             margin: 48px;
             .module{
                 max-width: 272px;
+                min-width: 200px;
+                width: 100%;
                 h2{
+                    position: relative;
                     width: 56px;
                     height: 56px;
                     border-radius: 50%;
@@ -489,6 +494,83 @@ span{
 
                 aspect-ratio: 9 / 16;
             }
+        }
+
+        .feedbacks-comment-container{
+            position: relative;
+            display: flex;
+            justify-content: center;
+            margin-top: 150px;
+            width: 100%;
+            max-width: 880px;
+            gap: 40px;
+            flex-wrap: wrap;   
+            
+            .break{
+                position: relative;
+                width: 100%;
+                height: auto;
+                display: flex;
+                justify-content: center;
+                gap: 40px;
+                align-items: flex-start;
+                flex-wrap: wrap;
+
+                &:first-child{
+                    align-items: flex-end;
+                }
+
+                .feedback-comment{
+                    width: 100%;
+                    max-width: 416px;
+                    min-width: 300px;
+                    padding: 28px;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 28px;
+                    background: $gray-2;
+                    border-radius: 16px;
+    
+                    .comment-info{
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        gap: 8px;
+    
+                        .user-info{
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                            gap: 8px;
+    
+                            .user-avatar{
+                                max-width: 40px;
+                                max-height: 40px;
+                                width: 100%;
+                                height: 100%;
+                                overflow: hidden;
+                                border-radius: 50%;
+    
+                                img{
+                                    width: 100%;
+                                    aspect-ratio: 1 / 1 ;
+                                }
+                            }
+    
+                            .user-name{
+                                h4{
+                                    font-weight: 600;
+                                }
+                                p{
+                                    font-size: 14px;
+                                    color: #756886;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
         }
     }
 }
@@ -812,6 +894,17 @@ span{
     text-transform: uppercase;
 }
 
+@media screen and (min-width: 1350px) {
+    .feedbacks .break{
+        left: 150px;
+    
+        &:nth-child(2){
+            left: -150px;
+        }
+
+    }
+}
+
 @media screen and (max-width: 1100px) {
     // BG HEADLINE
     .bg-frontpage .container{
@@ -907,6 +1000,14 @@ span{
             gap: 120px;
         }
     }
+    
+    .feedbacks {
+        .feedbacks-comment-container {
+            .feedback-comment:nth-child(3){
+                margin-top: 0 !important;
+            }
+        } 
+    }
 
 }
 
@@ -944,7 +1045,12 @@ span{
             .modules-container{
                 grid-template-columns: 1fr;
                 .module{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
                     max-width: 332px;
+                    text-align: center;
                 }
             }
             .cta-section .text h3{
@@ -971,6 +1077,9 @@ span{
         .feedbacks-title{
             margin-bottom: 200px;
         }
+    }
+    .feedbacks-comment-container{
+        flex-wrap: wrap;
     }
 
     // ABOUT SECTION

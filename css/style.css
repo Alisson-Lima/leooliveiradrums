@@ -136,7 +136,7 @@ span {
   text-align: center;
   padding: 16px 32px;
   border-radius: 8px;
-  background: linear-gradient(90deg, #8239E0 0%, #5416A4 100%);
+  background: linear-gradient(90deg, #229922 0%, #2DCA2D 100%);
   color: #F3EBFD;
   text-transform: uppercase;
   text-decoration: none;
@@ -147,7 +147,7 @@ span {
   transition: 0.5s;
 }
 .CTA-button:hover {
-  box-shadow: 0px 16.98748px 28.14375px 0px rgba(142, 52, 255, 0.16), 0px 31.92707px 52.63979px 0px rgba(142, 52, 255, 0.19), 0px 75px 126px 0px rgba(142, 52, 255, 0.27);
+  box-shadow: 0px 24px 40px rgba(43, 195, 43, 0.07), 0px 16.98748px 28.14375px 0px rgba(43, 195, 43, 0.1), 0px 31.92707px 52.63979px 0px rgba(43, 195, 43, 0.13), 0px 75px 126px 0px rgba(43, 195, 43, 0.18);
 }
 .CTA-button:hover svg:first-child {
   transform: translateX(6px);
@@ -199,11 +199,14 @@ span {
 .header {
   margin-bottom: 112px;
   width: 100%;
-  height: 40px;
+  padding: 10px 0;
   background: rgba(22, 15, 32, 0.3490196078);
   border-bottom: 2px solid #160F20;
   -webkit-backdrop-filter: blur(10px);
           backdrop-filter: blur(10px);
+}
+.header svg {
+  margin-right: 16px;
 }
 .header p {
   color: #9180A6;
@@ -332,8 +335,11 @@ span {
 }
 .course-modules .container .modules-container .module {
   max-width: 272px;
+  min-width: 200px;
+  width: 100%;
 }
 .course-modules .container .modules-container .module h2 {
+  position: relative;
   width: 56px;
   height: 56px;
   border-radius: 50%;
@@ -424,6 +430,71 @@ span {
   width: 100%;
   max-width: 250px;
   aspect-ratio: 9/16;
+}
+.feedbacks .container .feedbacks-comment-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin-top: 150px;
+  width: 100%;
+  max-width: 880px;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+.feedbacks .container .feedbacks-comment-container .break {
+  position: relative;
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+.feedbacks .container .feedbacks-comment-container .break:first-child {
+  align-items: flex-end;
+}
+.feedbacks .container .feedbacks-comment-container .break .feedback-comment {
+  width: 100%;
+  max-width: 416px;
+  min-width: 300px;
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  background: #160F20;
+  border-radius: 16px;
+}
+.feedbacks .container .feedbacks-comment-container .break .feedback-comment .comment-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+}
+.feedbacks .container .feedbacks-comment-container .break .feedback-comment .comment-info .user-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+}
+.feedbacks .container .feedbacks-comment-container .break .feedback-comment .comment-info .user-info .user-avatar {
+  max-width: 40px;
+  max-height: 40px;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 50%;
+}
+.feedbacks .container .feedbacks-comment-container .break .feedback-comment .comment-info .user-info .user-avatar img {
+  width: 100%;
+  aspect-ratio: 1/1;
+}
+.feedbacks .container .feedbacks-comment-container .break .feedback-comment .comment-info .user-info .user-name h4 {
+  font-weight: 600;
+}
+.feedbacks .container .feedbacks-comment-container .break .feedback-comment .comment-info .user-info .user-name p {
+  font-size: 14px;
+  color: #756886;
 }
 
 .aboutme .container {
@@ -697,6 +768,14 @@ span {
   text-transform: uppercase;
 }
 
+@media screen and (min-width: 1350px) {
+  .feedbacks .break {
+    left: 150px;
+  }
+  .feedbacks .break:nth-child(2) {
+    left: -150px;
+  }
+}
 @media screen and (max-width: 1100px) {
   .bg-frontpage .container .bg-detail-headline:last-child {
     left: -100px;
@@ -766,6 +845,9 @@ span {
     flex-direction: column;
     gap: 120px;
   }
+  .feedbacks .feedbacks-comment-container .feedback-comment:nth-child(3) {
+    margin-top: 0 !important;
+  }
 }
 @media screen and (max-width: 516px) {
   .header {
@@ -788,7 +870,12 @@ span {
     grid-template-columns: 1fr;
   }
   .course-modules .container .modules-container .module {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     max-width: 332px;
+    text-align: center;
   }
   .course-modules .container .cta-section .text h3 {
     margin-bottom: 16px;
@@ -803,6 +890,9 @@ span {
   }
   .feedbacks .container .feedbacks-title {
     margin-bottom: 200px;
+  }
+  .feedbacks-comment-container {
+    flex-wrap: wrap;
   }
   .aboutme {
     margin-bottom: 48px;
