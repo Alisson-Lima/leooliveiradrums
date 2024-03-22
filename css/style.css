@@ -388,6 +388,95 @@ span {
   top: 700px;
 }
 
+.bonus-class {
+  margin-top: 120px;
+  margin-bottom: 0;
+}
+.bonus-class .container {
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.bonus-class .container .content {
+  max-width: 550px;
+}
+.bonus-class .container .content .bonus-tick {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 16px;
+}
+.bonus-class .container .content .bonus-tick p {
+  color: #229922;
+  margin: 0;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+.bonus-class .container .content .bonus-tick svg {
+  margin-right: 8px;
+}
+.bonus-class .container .content h1 {
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+.bonus-class .container .content p {
+  margin-bottom: 28px;
+  max-width: 532px;
+  font-size: 20px;
+  font-weight: 500;
+}
+.bonus-class .container .content button {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.4s;
+  width: 100%;
+  height: 52px;
+  max-width: 204px;
+  border-radius: 50px;
+  border: none;
+  background: linear-gradient(90deg, #8239E0 0%, #5416A4 100%);
+}
+.bonus-class .container .content button p {
+  position: relative;
+  color: #F3EBFD;
+  font-size: 16px;
+  text-transform: uppercase;
+  font-family: "Montserrat";
+  font-weight: bolder;
+  margin: 0;
+  right: 12px;
+}
+.bonus-class .container .content button .play {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 38px;
+  height: 38px;
+  background: linear-gradient(90deg, #5416A4 0%, #8239E0 100%);
+  border-radius: 100%;
+  right: 6px;
+  box-shadow: -2px 0 4px rgba(0, 0, 0, 0.1);
+}
+.bonus-class .container .content button .play svg {
+  position: relative;
+  left: 2px;
+}
+.bonus-class .container .content button:hover {
+  filter: brightness(1.1);
+}
+.bonus-class .container .bonus-class-video {
+  max-width: 500px;
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 16/9;
+}
+.bonus-class .container .bonus-class-video iframe {
+  border-radius: 16px;
+}
+
 .feedbacks {
   padding-top: 72px;
 }
@@ -845,6 +934,23 @@ span {
   .buysection .container {
     flex-direction: column;
     gap: 120px;
+  }
+  .bonus-class .container {
+    flex-direction: column;
+    text-align: center;
+  }
+  .bonus-class .container .content {
+    margin-bottom: 40px;
+  }
+  .bonus-class .container .content .bonus-tick {
+    justify-content: center;
+  }
+  .bonus-class .container .content .playButton {
+    margin: 0 auto;
+  }
+  .bonus-class .container .content p {
+    margin-left: auto;
+    margin-right: auto;
   }
   .feedbacks .feedbacks-comment-container .feedback-comment:nth-child(3) {
     margin-top: 0 !important;

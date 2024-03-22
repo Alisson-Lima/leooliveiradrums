@@ -446,6 +446,100 @@ span{
     }
 }
 
+.bonus-class{
+    margin-top: 120px;
+    margin-bottom: 0;
+    .container{
+       justify-content: space-between;
+       flex-wrap: wrap;
+       .content{
+            max-width: 550px;
+           .bonus-tick{
+               display: flex;
+               justify-content: flex-start;
+               align-items: center;
+   
+               margin-bottom: 16px;
+               p{
+                   color: $green-dark;
+                   margin: 0;
+                   text-transform: uppercase;
+                   font-size: 14px;
+               }
+               svg{
+                   margin-right: 8px;
+               }
+           }
+           h1{
+               margin-bottom: 20px;
+               text-transform: uppercase;
+           }
+           p{
+               margin-bottom: 28px;
+               max-width: 532px;
+               font-size: 20px;
+               font-weight: 500;
+           }
+           button{
+                position: relative;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                cursor: pointer;
+                transition: 0.4s;
+                width: 100%;
+                height: 52px;
+                max-width: 204px;
+                border-radius: 50px;
+                border: none;
+                background: $gradient-purple;
+                p{
+                    position: relative;
+                    color: $white;
+                    font-size: 16px;
+                    text-transform: uppercase;
+                    font-family: "Montserrat";
+                    font-weight: bolder;
+                    margin: 0;
+                    right: 12px;
+                }
+
+                .play{
+                    position: absolute;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 38px;
+                    height: 38px;
+                    background: $gradient-purple-reverse;
+                    border-radius: 100%;
+                    right: 6px;
+                    box-shadow: -2px 0 4px rgba(0, 0, 0, 0.10);
+
+                    svg{
+                        position: relative;
+                        left: 2px;
+                    }
+                }
+
+                &:hover{
+                    filter: brightness(1.1);
+                }
+           }
+       }
+       .bonus-class-video{
+           max-width: 500px;
+           width: 100%;
+           height: 100%;
+           aspect-ratio: 16/9;
+   
+           iframe{
+               border-radius: 16px;
+           }
+       }
+   }
+}
+
 // FEEDBACKS
 
 .feedbacks{
@@ -1002,6 +1096,27 @@ span{
         }
     }
     
+    // BONUS CLASS
+    .bonus-class .container{
+        flex-direction: column;
+        text-align: center;
+
+        .content{
+            margin-bottom: 40px;
+            .bonus-tick{
+                justify-content: center;
+            }
+            .playButton{
+                margin: 0 auto;
+            }
+            p{
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+    }
+
+    // FEEDBACKS
     .feedbacks {
         .feedbacks-comment-container {
             .feedback-comment:nth-child(3){

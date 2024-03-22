@@ -17,6 +17,7 @@ $white: #F3EBFD;
 // Gradients
 
 $gradient-purple: linear-gradient(90deg, $purple-light 0%, $purple-dark 100%);
+$gradient-purple-reverse: linear-gradient(90deg, $purple-dark 0%, $purple-light 100%);
 $gradient-green: linear-gradient(90deg, $green-dark 0%, $green-light 100%);
 $gradient-black: radial-gradient(66.43% 66.43% at 76.5% 83.5%, #1D0F30 0%, #07020E 100%);
 
