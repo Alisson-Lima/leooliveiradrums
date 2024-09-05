@@ -276,10 +276,17 @@ img {
 }
 #headline .container .content .video_curso {
   margin-top: 80px;
+  width: 100%;
+  max-width: 580px;
   overflow: hidden;
   border-radius: 24px;
   z-index: 40;
   cursor: pointer;
+}
+#headline .container .content .video_curso iframe {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16/9;
 }
 
 #about_course .container {
